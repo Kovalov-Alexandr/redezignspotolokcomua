@@ -1,0 +1,154 @@
+#navigation {
+    height: 30px; 
+    margin: 0 0 10px;
+    font-family: "Open Sans";
+}
+#navigation ul {
+    margin: 0;
+    padding: 0;
+}
+#navigation li {
+    display: inline-block;
+    float: left;
+    line-height: 30px; /* this should be the same as your #navigation height */
+    height: 30px; /* this should be the same as your #navigation height */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#navigation li a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 2vw;
+    text-transform: uppercase;
+}
+#navigation li a:hover {
+    text-decoration: none;
+}
+#navigation .current-menu-item a, #navigation .current_page_item a, #navigation ul ul li a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+#navigation .current-menu-item .sub-menu a {
+    font-weight: normal;
+}
+#navigation ul ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+#navigation ul ul li {
+    float: none;
+    width: 300px;
+}
+#navigation ul ul li a {
+    color: #000;
+    padding: 5px 10px;
+}
+#navigation ul li:hover > ul {
+    display: block;
+}
+#navigation ul ul li ul {
+    left: 300px;
+    top: 0;
+}
+
+#btnClose {
+    display: none;
+}
+
+@media only screen and (max-width:767px) {
+    
+    #btnClose {
+        display: block;
+    }
+
+    #mobile-header {
+        display: block;
+    }
+    #navigation {
+        display: none;
+    }
+
+    #responsive-menu-button > span {
+        background: #000 none repeat scroll 0 0;
+        display: block;
+        height: 2px;
+        margin: 12px;
+        width: 40px;
+    }
+
+    #responsive-menu-button {
+        display: block;
+        margin: 40px;
+        vertical-align: middle;
+    }
+
+    #open.sidr.right {
+        right: -30%;
+    }
+
+    #open {
+        background: #f5f5f5 none repeat scroll 0 0;
+        box-shadow: none;
+        height: auto;
+        margin: 0;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0 5%;
+        text-align: right;
+        width: 30%;
+    }
+
+    #open.sidr .sidr-inner {
+        font-size: 18px;
+        padding: 35px 0;
+        text-transform: uppercase;
+    }
+
+    #open.sidr ul {
+        border: medium none;
+    }
+
+    #open.sidr ul li {
+        border: medium none;
+        transition: border 5s ease;
+    }
+
+    #open.sidr ul li:hover > a, #open.sidr ul li:hover > span, #open.sidr ul li.active > a, #open.sidr ul li.active > span, 
+    #open.sidr ul li.sidr-class-active > a, #open.sidr ul li.sidr-class-active > span {
+        box-shadow: none;
+        color: #25AAE1;
+        border-bottom: 3px solid #25AAE1;
+        transition: border 5s ease;
+    }
+
+    #open.sidr ul li a, #open.sidr ul li span {
+        padding: 5px 3%;
+    }
+
+    #btnClose {
+        color: inherit;
+        font-size: 35px;
+        vertical-align: middle;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #navigation li a {
+        padding: 0 1.8vw;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #navigation li a {
+        padding: 0 1.5vw;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #navigation li a {
+        padding: 0 1.4vw;
+    }
+}
